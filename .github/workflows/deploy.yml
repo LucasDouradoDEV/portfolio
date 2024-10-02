@@ -30,9 +30,9 @@ jobs:
                 SSH_PRIVATE_KEY: ${{secrets.SERVER_SSH_KEY}}
                 ARGS: "-rlgoDzvc --delete"
                 SOURCE: "dist/portfolio"
-                REMOTE_HOST: ${{secrets.SERVER_HOST}}
-                REMOTE_USER: ${{secrets.SERVER_USER}}
-                REMOTE_PORT: ${{secrets.SERVER_PORT}}
+                REMOTE_HOST: ${{vars.REMOTE_HOST}}
+                REMOTE_USER: ${{vars.REMOTE_USER}}
+                REMOTE_PORT: ${{vars.REMOTE_PORT}}
                 TARGET: ${{vars.TARGET}}
 
     # deploy staging
@@ -51,9 +51,9 @@ jobs:
                 SSH_PRIVATE_KEY: ${{secrets.SERVER_SSH_KEY}}
                 ARGS: "-rlgoDzvc --delete"
                 SOURCE: "dist/portfolio"
-                REMOTE_HOST: ${{secrets.SERVER_HOST}}
-                REMOTE_USER: ${{secrets.SERVER_USER}}
-                REMOTE_PORT: ${{secrets.SERVER_PORT}}
+                REMOTE_HOST: ${{vars.REMOTE_HOST}}
+                REMOTE_USER: ${{vars.REMOTE_USER}}
+                REMOTE_PORT: ${{vars.REMOTE_PORT}}
                 TARGET: ${{vars.TARGET}}
 
     # deploy production
@@ -72,7 +72,7 @@ jobs:
                 SSH_PRIVATE_KEY: ${{secrets.SERVER_SSH_KEY}}
                 ARGS: "-rlgoDzvc --delete"
                 SOURCE: "dist/portfolio"
-                REMOTE_HOST: ${{secrets.SERVER_HOST}}
-                REMOTE_USER: ${{secrets.SERVER_USER}}
-                REMOTE_PORT: ${{secrets.SERVER_PORT}}
+                REMOTE_HOST: ${{vars.REMOTE_HOST}}
+                REMOTE_USER: ${{vars.REMOTE_USER}}
+                REMOTE_PORT: ${{vars.REMOTE_PORT}}
                 TARGET: ${{vars.TARGET}}
